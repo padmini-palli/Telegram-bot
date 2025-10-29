@@ -33,7 +33,7 @@ It uses **local FAISS vector search** for document retrieval and **Vertex AI emb
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/padmini-palli/Telegram-bot.git
-cd telegram_bot(Simple RAG)
+cd telegram_bot
 
 pip install -r requirements.txt
-python telegram_bot(Simple RAG).py
+python bot_text_rag.py

@@ -1,4 +1,4 @@
-# Gemini 2.5 Flash Telegram Bot (Text-based RAG)
+# Telegram Bot (Text-based RAG)
 
 This project builds a **Telegram bot** powered by **Google Gemini 2.5 Flash** for text-based question answering and summarization.  
 It uses **local FAISS vector search** for document retrieval and **Vertex AI embeddings** for semantic similarity.
@@ -32,8 +32,8 @@ It uses **local FAISS vector search** for document retrieval and **Vertex AI emb
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/gemini-telegram-bot.git
-cd gemini-telegram-bot
+git clone https://github.com/padmini-palli/Telegram-bot.git
+cd telegram_bot(Simple RAG)
 
 pip install -r requirements.txt
-python telegram_bot.py
+python telegram_bot(Simple RAG).py

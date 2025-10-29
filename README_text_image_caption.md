@@ -44,10 +44,9 @@ It combines **text reasoning** and **vision understanding** in one bot — power
 !pip install -e .
 
 ### Clone the Repository
-```bash
 git clone https://github.com/padmini-palli/Telegram-bot.git
-cd Telegram_Bot(Text+Image_Captioning)
+cd Telegram-bot
 
 pip install -r requirements.txt
-python Telegram_Bot(Text+Image_Captioning).py
+python bot_text_image_caption.py.py
 

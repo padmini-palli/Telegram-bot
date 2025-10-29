@@ -8,8 +8,8 @@ Built for both **text-based question answering (RAG)** and **image caption gener
 
 ## 🎬 Demo
 
-![Demo GIF](demo1.gif) for Text/Summarize
-![Demo GIF](demo2.gif) for Text and image 
+![Demo GIF](Demo1.gif) for Text/Summarize
+![Demo GIF](Demo2.gif) for Text and image 
 
 ---
 
@@ -17,9 +17,9 @@ Built for both **text-based question answering (RAG)** and **image caption gener
 
 | Folder | Description |
 |--------|--------------|
-| **`text_rag_bot/`** | Text-only Gemini RAG bot for Q&A and summarization. |
-| **`text_image_bot/`** | Extended version with image captioning (Gemini + BLIP). |
-| **`assets/`** | Contains example images, demo GIFs, and screenshots. |
+| **`text_rag_bot** | Text-only Gemini RAG bot for Q&A and summarization. |
+| **`text_image_bot** | Extended version with image captioning (Gemini + BLIP). |
+| **`assets** | Contains example images, demo GIFs. |
 
 ---
 

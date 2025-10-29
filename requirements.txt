@@ -1,0 +1,12 @@
+python-telegram-bot[ext]==20.5
+sentence-transformers
+transformers
+torch
+pillow
+numpy
+tqdm
+openai  # optional if you want OpenAI fallback
+# google-cloud-aiplatform==1.65.0
+# google-generativeai==0.8.3
+# faiss-cpu
+# python-dotenv

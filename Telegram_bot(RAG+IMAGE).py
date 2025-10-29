@@ -11,6 +11,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from google.cloud import aiplatform
 import google.generativeai as genai
+import torch
+from PIL import Image
+from transformers import BlipProcessor, BlipForConditionalGeneration
 
 # =====================================
 #  Load environment variables
@@ -205,10 +208,6 @@ async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #         analysis += "- No EXIF metadata found\n"
 
 #     await update.message.reply_text(analysis, parse_mode="Markdown")
-
-import torch
-from PIL import Image
-from transformers import BlipProcessor, BlipForConditionalGeneration
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-large")

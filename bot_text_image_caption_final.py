@@ -14,6 +14,11 @@ import google.generativeai as genai
 import torch
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
+import nest_asyncio
+import asyncio
+import vertexai
+nest_asyncio.apply()
+from vertexai.generative_models import GenerationConfig, GenerativeModel, SafetySetting
 
 import os
 if os.getenv("BOT_RUNNING"):
@@ -25,21 +30,14 @@ os.environ["BOT_RUNNING"] = "1"
 # =====================================
 #  Load environment variables
 # =====================================
-import nest_asyncio
-import asyncio
-nest_asyncio.apply()
-from vertexai.generative_models import GenerationConfig, GenerativeModel, SafetySetting
 
-# ============== CONFIG =====================
+
 TELEGRAM_TOKEN="XXXX"
 PROJECT_ID = "XXX-XXX-XXXX"
 LOCATION = "us-XXXXX"
 EMBED_MODEL = "text-embedding-005"
 GEN_MODEL = "gemini-2.5-flash"
-
-import vertexai
-#from vertexai.language_models import GenerativeModel, GenerationConfig, SafetySetting
-
+# ============== CONFIG =====================
 # Initialize Vertex AI
 vertexai.init(project="gpeg-camps-platform", location="us-central1")
 logging.basicConfig(level=logging.INFO)
@@ -137,7 +135,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         " *Commands:*\n"
         "/ask <query> → Ask about docs\n"
-        "/summarize → Summarize last few interactions22"
+        "/summarize → Summarize last few interactions\n"
         "Send an image → Get local analysis (no API call)",
         parse_mode="Markdown"
     )

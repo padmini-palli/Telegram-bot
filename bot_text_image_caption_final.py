@@ -179,43 +179,7 @@ async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
     response = model.generate_content(prompt)
     summary = response.text.strip()
     await update.message.reply_text(f" *Summary:*\n{summary}", parse_mode="Markdown")
-# async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.message.from_user.id
-#     query = " ".join(context.args)
-#     if not query:
-#         await update.message.reply_text("Please provide a query. Example: /ask What is the leave policy?")
-#         return
 
-#     context_text, source = retrieve_similar(query)
-#     history = USER_HISTORY.get(user_id, [])
-
-#     try:
-#         answer = await generate_answer(context_text, query, history)
-#     except Exception as e:
-#         await update.message.reply_text(f" Error generating answer: {e}")
-#         return
-
-#     USER_HISTORY.setdefault(user_id, []).append({"q": query, "a": answer})
-#     USER_HISTORY[user_id] = USER_HISTORY[user_id][-3:]
-
-#     await update.message.reply_text(
-#         f" *Answer:*\n{answer}\n\n📄 *Source:* `{source}`",
-#         parse_mode="Markdown"
-#     )
-
-# async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.message.from_user.id
-#     history = USER_HISTORY.get(user_id, [])
-#     if not history:
-#         await update.message.reply_text("No recent chat to summarize.")
-#         return
-
-#     chat_text = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
-#     prompt = f"Summarize briefly:\n\n{chat_text}"
-#     model = GenerativeModel(GEN_MODEL)
-#     response = model.generate_content(prompt)
-#     summary = response.text.strip()
-#     await update.message.reply_text(f" *Summary:*\n{summary}", parse_mode="Markdown")
 
 # =====================================
 #  Local Image Analyzer (PIL)

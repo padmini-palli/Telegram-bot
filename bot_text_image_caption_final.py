@@ -31,7 +31,7 @@ nest_asyncio.apply()
 from vertexai.generative_models import GenerationConfig, GenerativeModel, SafetySetting
 
 # ============== CONFIG =====================
-TELEGRAM_TOKEN="7878565591:AAEANaNVvjbeQ_k-sN6_MorEgE0sRCqsy18"
+TELEGRAM_TOKEN="XXXX"
 PROJECT_ID = "XXX-XXX-XXXX"
 LOCATION = "us-XXXXX"
 EMBED_MODEL = "text-embedding-005"
